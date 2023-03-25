@@ -34,7 +34,6 @@ colorPixels: 	sw $t2, 0($t0)			# initialize frame with color
 		add $t3, $zero, $s0		# t3 <- w
 		addi $t3, $t3, -48		# t3 <- w - 48
 		srl $t3, $t3, 1			# t3 <- (w - 48)/2
-		add $t6, $zero, $t3		# t6 <- (w - 48)/2
 		add $t1, $t1, $t3		# t1 <- 64 + h + l + ( (w - 48)/2 ) 
 		andi $t3, $t1, 0x001		# last bit of bottle height
 		beq $t3, $t4, exit		# exit if height is odd
